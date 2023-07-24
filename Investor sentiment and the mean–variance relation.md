@@ -40,7 +40,8 @@ Baker and Wurgler(2006)形成的一个综合情绪指数
 >closed-end fund discount, the NYSE share turnover, the number of IPOs, the average first-day return of IPOs, the equity share in new issues, and the dividend premium.
 >首先对宏观经济变量进行回归，取出残差后选用主成分回归的第一个主成分作为投资者情绪
 ## 3.2 描述性统计
-![[描述性统计.png]]
+![image](https://github.com/FuHuakang/Paper_Read/assets/110003295/47c9dd65-8fdb-4a66-a8a0-a3132d593463)
+
 从上图中可以观察以下几点：
 1. 对于Equal-weighted index而言，低情绪时期的收益率明显高于高情绪时期
 >在高情绪时期，股票被高估从而收益降低
@@ -53,13 +54,14 @@ Baker and Wurgler(2006)形成的一个综合情绪指数
 $$R_{t+1}=a+bVar_t(R_{t+1})+\epsilon_{t+1}$$
 为了考虑情绪的影响，加入情绪的虚拟变量：
 $$R_{t+1}=a_1+b_1Var_t(R_{t+1})+a_2D_t+b_2D_tVar_t(R_{t+1})+\epsilon_{t+1}$$
-基于假设，我们认为$b_1$应当是正的，而$b_2$是负的，因为高情绪会削弱均值方差关系
+基于假设，我们认为 $b_1$应当是正的，而 $b_2$是负的，因为高情绪会削弱均值方差关系
 
-![[766e9e8ebd863a9b0c17af54e0242a9.png]]
+![image](https://github.com/FuHuakang/Paper_Read/assets/110003295/7e3fd9e9-7f1c-45f6-885f-178dc2e82ae1)
+
 在One-regime方程中发现均值-方差关系是模糊的，R方很小，同时统计上不显著
 在Two-regime方程中，正如我们所预料的那样，而且在统计上同样显著
 >上述的结果基于RWm计算，在文中还报告了剩余三种模型，结果同样支持假设
-后续还加入了$Var_t(R_{t+1})^u$
+后续还加入了 $Var_t(R_{t+1})^u$
 ## 3.4 机制
 本文研究的重点在于投资者情绪如何影响均值方差关系，研究的方式使用交互项回归的方式，文中包括两个：
 $$D_tVar_t(R_{t+1})$$
